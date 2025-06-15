@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  resume-matcher:
+    build: .
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    environment:
+      - SYNC_DATABASE_URL=sqlite:///data/app.db
+      - ASYNC_DATABASE_URL=sqlite+aiosqlite:///data/app.db
+      - SESSION_SECRET_KEY=a-secret-key
+    volumes:
+      - data:/data
+volumes:
+  data:
