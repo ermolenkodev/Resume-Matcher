@@ -82,6 +82,18 @@ create a markdown table
 | Next.js      | 15+                   |
 | Ollama       |        0.6.7        |
 
+## Docker Quickstart
+
+You can also run Resume Matcher using Docker for an isolated setup.
+
+```bash
+# build and start the containers
+docker compose up --build
+```
+
+The web interface will be available at [http://localhost:3000](http://localhost:3000).
+The SQLite database is stored in the persistent `data` volume so your data is not lost when the container stops.
+
 
 ## Join Us and Contribute
 
